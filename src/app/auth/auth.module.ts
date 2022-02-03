@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { authRoutes } from './auth.routing';
+import { FormsModule } from '@angular/forms';
+import { AuthProvider } from '../core/domain/providers/auth.provider';
 
 
 
@@ -12,7 +14,9 @@ import { authRoutes } from './auth.routing';
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(authRoutes)
-  ]
+    RouterModule.forChild(authRoutes),
+    FormsModule
+  ],
+  providers: [AuthProvider]
 })
 export class AuthModule { }
