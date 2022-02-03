@@ -14,8 +14,8 @@ export class AuthServices implements IAuthRepository {
         if ( usersAuthData.find( (data) => data.username == userAuth.username && data.password == userAuth.password )) 
         {
 
-        return AuthStatus.SUCESS;
-        
+            return AuthStatus.SUCESS;
+
         }
 
         return AuthStatus.ERROR;
