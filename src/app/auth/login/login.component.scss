@@ -1,0 +1,42 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5% 30%;
+    padding: 3% 0% 5% 0%;
+    border: none;
+    border-radius: 10px;
+    background: #134E5E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #71B280, #134E5E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.label-style {
+    font-size: 24px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.input-text-style {
+    width: 60%;
+    height: 5vh;
+    text-align: center;
+    margin-bottom: 5vh;
+    font-size: 16px;
+}
+
+.input-button-style {
+    color: white;
+    font-size: 24px;
+    border-radius: 5px;
+    background: #23c970;
+    width: 20vh;
+    height: 8vh;
+    border: none;
+}
+
+.img-style{
+    width: 20%;
+    padding-bottom: 5vh;
+}
