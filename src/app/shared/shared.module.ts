@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CustomModule } from './custom/custom.module';
+import { PageModule } from './pages/page.module';
 
 
 
@@ -7,6 +9,10 @@ import { CommonModule } from '@angular/common';
   declarations: [],
   imports: [
     CommonModule
+  ],
+  exports: [
+    CustomModule,
+    PageModule
   ]
 })
 export class SharedModule { }

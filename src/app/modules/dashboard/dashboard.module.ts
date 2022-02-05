@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { dashboardRoutes } from '../modules.routing';
+
+import { SharedModule } from 'src/app/shared/shared.module';
+import { dashboardRoutes } from './dashboard.routing';
+
 import { HomeComponent } from './home/home.component';
 
 
@@ -11,6 +14,7 @@ import { HomeComponent } from './home/home.component';
   ],
 
   imports: [
+    SharedModule,
     RouterModule.forChild(dashboardRoutes)
   ]
 
