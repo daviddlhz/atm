@@ -1,7 +1,6 @@
 import { IUserAuth } from "../interfaces/IUserAuth";
+import { IUserData } from "../interfaces/IUserData";
 
 export interface IAuthRepository {
-
-    Authentication(userAuth: IUserAuth): number;
-
+  Authenticate(userAuth: IUserAuth): IUserData | undefined;
 }

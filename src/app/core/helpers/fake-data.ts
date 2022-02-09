@@ -1,4 +1,7 @@
-export const usersAuthData = [
+import { IUserData } from "../domain/interfaces/IUserData";
+
+//tipar with interface
+export const usersData: IUserData[] = [
   {
     id: 0,
     username: 'user',
