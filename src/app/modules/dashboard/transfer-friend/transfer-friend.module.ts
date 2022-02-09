@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { transferFriendRoutes } from '../../modules.routing';
+import { transferFriendRoutes } from './transfer-friend.routing';
 import { TransferFriendComponent } from './index/transfer-friend.component';
 
 

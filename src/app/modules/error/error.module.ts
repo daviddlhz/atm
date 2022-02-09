@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { errorRoutes } from '../modules.routing';
+import { errorRoutes } from './error.routing';
 
 import { NotFoundComponent } from './not-found/not-found.component';
 

@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './transfer-friend.component.html',
   styleUrls: ['./transfer-friend.component.scss']
 })
-export class TransferFriendComponent implements OnInit {
+export class TransferFriendComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

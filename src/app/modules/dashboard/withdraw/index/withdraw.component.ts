@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './withdraw.component.html',
   styleUrls: ['./withdraw.component.scss']
 })
-export class WithdrawComponent implements OnInit {
+export class WithdrawComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

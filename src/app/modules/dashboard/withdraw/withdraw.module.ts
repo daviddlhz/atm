@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { withdrawRoutes } from '../../modules.routing';
+import { withdrawRoutes } from './withdraw.routing';
 import { WithdrawComponent } from './index/withdraw.component';
 
 

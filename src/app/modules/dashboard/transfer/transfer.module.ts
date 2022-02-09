@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { transferRoutes } from '../../modules.routing';
+import { transferRoutes } from './transfer.routing';
 import { TransferComponent } from './index/transfer.component';
 
 
