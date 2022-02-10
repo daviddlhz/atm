@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { authRoutes } from './auth.routing';
 import { FormsModule } from '@angular/forms';
 import { AuthProvider } from '../core/domain/providers/auth.provider';
+import { StorageProvider } from '../core/domain/providers/storage.provider';
 
 
 
@@ -17,6 +18,10 @@ import { AuthProvider } from '../core/domain/providers/auth.provider';
     RouterModule.forChild(authRoutes),
     FormsModule
   ],
-  providers: [AuthProvider]
+  providers: [
+    AuthProvider,
+    StorageProvider
+  ]
 })
+
 export class AuthModule { }
