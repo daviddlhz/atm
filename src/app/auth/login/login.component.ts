@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { IUserAuth } from 'src/app/core/domain/interfaces/IUserAuth';
 import { IUserData } from 'src/app/core/domain/interfaces/IUserData';
 import { IAuthRepository } from 'src/app/core/domain/repository/IAuth.repository';
+import { IStorageRepository } from 'src/app/core/domain/repository/IStorage.repository';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,10 @@ export class LoginComponent {
   userName: string = '';
   password: string = '';
 
-  constructor(@Inject('authRepository') private authService: IAuthRepository, private router: Router) { }
+  constructor(
+    @Inject('authRepository') private authService: IAuthRepository,
+    @Inject('storageRepository') private StorageService: IStorageRepository,
+    private router: Router ) { }
 
   login() {
     //implementar inicializacion en otra parte
@@ -27,7 +31,7 @@ export class LoginComponent {
     const userLogged: IUserData | undefined = this.authService.Authenticate(userData);
 
     if (userLogged) {
-      console.log(userLogged)
+      this.StorageService.save(userLogged);
       this.router.navigate(['/dashboard']);
     }
   }
