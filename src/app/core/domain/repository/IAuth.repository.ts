@@ -3,4 +3,5 @@ import { IUserData } from "../interfaces/IUserData";
 
 export interface IAuthRepository {
   Authenticate(userAuth: IUserAuth): IUserData | undefined;
+  CloseSession(): void;
 }
