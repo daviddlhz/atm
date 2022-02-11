@@ -1,6 +1,7 @@
+import { accountType } from "../domain/enum/accountType.enum";
+import { IBankData } from "../domain/interfaces/IBankData";
 import { IUserData } from "../domain/interfaces/IUserData";
 
-//tipar with interface
 export const usersData: IUserData[] = [
   {
     id: 0,
@@ -8,6 +9,12 @@ export const usersData: IUserData[] = [
     password: 'test',
     firstName: 'User',
     lastName: 'Test',
+    bankInformation: {
+      accountNumber: 532143,
+      balance: 12000,
+      accountType: accountType.SAVING,
+      transactions: null,
+    },
   },
   {
     id: 1,
@@ -15,5 +22,11 @@ export const usersData: IUserData[] = [
     password: '1234',
     firstName: 'David',
     lastName: 'De La Hoz',
+    bankInformation: {
+      accountNumber: 596865,
+      balance: 57000,
+      accountType: accountType.SAVING,
+      transactions: null,
+    },
   },
 ];
