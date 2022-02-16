@@ -3,7 +3,7 @@
   <hr />
   <div class="sub-container">
     <div class="bank-information">
-      <p>Balance: {{balance}}</p>
+      <p>Balance: {{balance | currency: 'COP':'symbol-narrow'}}</p>
       <p>Account number: {{accountNumber}}</p>
       <p>Account type: {{accountType}}</p>
     </div>
