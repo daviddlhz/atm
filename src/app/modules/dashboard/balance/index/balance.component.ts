@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { IUserData } from 'src/app/core/domain/interfaces/IUserData';
+import { IStorageRepository } from 'src/app/core/domain/repository/IStorage.repository';
 
 @Component({
   selector: 'balance-component',
@@ -7,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BalanceComponent {
 
-  constructor() { }
+  userData: IUserData = this.storageService.getValue('USER_DATA');
+  balance: number = this.userData.bankInformation.balance;
+
+  constructor(@Inject('storageRepository') private storageService: IStorageRepository) { }
 
 }
