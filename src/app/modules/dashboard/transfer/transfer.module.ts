@@ -5,6 +5,7 @@ import { TransferComponent } from './index/transfer.component';
 import { StorageProvider } from 'src/app/core/domain/providers/storage.provider';
 import { TransferProvider } from './provider/transfer.provider';
 import { FormsModule } from '@angular/forms';
+import { DataProvider } from 'src/app/core/domain/providers/data.provider';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
   exports: [TransferComponent],
   providers: [
     StorageProvider,
-    TransferProvider
+    TransferProvider,
+    DataProvider
   ]
 })
 export class TransferModule {}

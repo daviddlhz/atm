@@ -1,18 +1,21 @@
 import { Inject, Injectable } from '@angular/core';
+import { storageKey } from 'src/app/core/domain/enum/storageKey.enum';
 import { ITransaction } from 'src/app/core/domain/interfaces/ITransaction';
 import { IUserData } from 'src/app/core/domain/interfaces/IUserData';
+import { IDataRepository } from 'src/app/core/domain/repository/IData.repository';
 import { IStorageRepository } from 'src/app/core/domain/repository/IStorage.repository';
-import { usersData } from 'src/app/core/helpers/fake-data';
 import { ITransferRepository } from '../repository/ITransfer.repository';
 
 @Injectable()
 export class TransferService implements ITransferRepository {
   
-  constructor(@Inject('storageRepository') private storageService: IStorageRepository) { }
+  constructor(
+    @Inject('storageRepository') private storageService: IStorageRepository,
+    @Inject('dataRepository') private dataService: IDataRepository) { }
 
   send(transaction: ITransaction): boolean {
     
-    const currentUser = this.storageService.getValue("USER_DATA");
+    const currentUser = this.storageService.getValue(storageKey.USER_DATA);
     const userToTransfer: IUserData | undefined = this.validateTransaction(transaction.transferTo);
 
     if (userToTransfer) {
@@ -23,7 +26,12 @@ export class TransferService implements ITransferRepository {
         currentUser.bankInformation.balance -= transaction.amount;
         currentUser.bankInformation.transactions?.push(transaction);
         
-        this.storageService.save(currentUser);
+        console.log(transaction);
+        console.log(currentUser);
+        
+        this.dataService.update(currentUser);
+        this.dataService.update(userToTransfer);
+        this.storageService.save(storageKey.USER_DATA, currentUser);
       }
       
       return true;
@@ -34,6 +42,7 @@ export class TransferService implements ITransferRepository {
   }
 
   validateTransaction(accountNumber: number): IUserData | undefined {
+    const usersData = this.storageService.getAll(storageKey.USERS_INFORMATION);
     return usersData.find((user) => user.bankInformation.accountNumber == accountNumber);
   }
 

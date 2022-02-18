@@ -23,7 +23,7 @@ export class TransferComponent {
       transferTo: this.transferTo, 
       description: this.description
     } 
-
+    
     this.transferService.send(transaction);
   }
 }

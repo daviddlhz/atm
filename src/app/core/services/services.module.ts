@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AuthServices } from './auth.services';
-import { StorageService } from './storage.services';
+import { AuthServices } from './auth.service';
+import { StorageService } from './storage.service';
 
 
 
