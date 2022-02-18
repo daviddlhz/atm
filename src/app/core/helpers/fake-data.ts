@@ -1,5 +1,4 @@
 import { accountType } from "../domain/enum/accountType.enum";
-import { IBankData } from "../domain/interfaces/IBankData";
 import { IUserData } from "../domain/interfaces/IUserData";
 
 export const usersData: IUserData[] = [
@@ -13,7 +12,7 @@ export const usersData: IUserData[] = [
       accountNumber: 532143,
       balance: 12000,
       accountType: accountType.SAVING,
-      transactions: null,
+      transactions: [],
     },
   },
   {
@@ -26,7 +25,7 @@ export const usersData: IUserData[] = [
       accountNumber: 596865,
       balance: 57000,
       accountType: accountType.SAVING,
-      transactions: null,
+      transactions: [],
     },
   },
 ];

@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { storageKey } from 'src/app/core/domain/enum/storageKey.enum';
 
 import { IUserAuth } from 'src/app/core/domain/interfaces/IUserAuth';
 import { IUserData } from 'src/app/core/domain/interfaces/IUserData';
@@ -31,7 +32,7 @@ export class LoginComponent {
     const userLogged: IUserData | undefined = this.authService.Authenticate(userData);
 
     if (userLogged) {
-      this.StorageService.save(userLogged);
+      this.StorageService.save(storageKey.USER_DATA, userLogged);
       this.router.navigate(['/dashboard']);
     }
   }

@@ -1,7 +1,9 @@
+import { storageKey } from "../enum/storageKey.enum";
 import { IUserData } from "../interfaces/IUserData";
 
 export interface IStorageRepository {
-  save(userData: IUserData): void;
-  getValue(key: string): IUserData;
-  delete(key: string): void;
+  save(key: storageKey, userData: IUserData | IUserData[]): void;
+  getValue(key: storageKey): IUserData;
+  getAll(key: storageKey): IUserData[];
+  delete(key: storageKey): void;
 }

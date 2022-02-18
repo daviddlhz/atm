@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { storageKey } from 'src/app/core/domain/enum/storageKey.enum';
 import { IUserData } from 'src/app/core/domain/interfaces/IUserData';
 import { IAuthRepository } from 'src/app/core/domain/repository/IAuth.repository';
 import { IStorageRepository } from 'src/app/core/domain/repository/IStorage.repository';
@@ -12,7 +13,7 @@ import { IStorageRepository } from 'src/app/core/domain/repository/IStorage.repo
 export class TopBarComponent implements OnInit {
 
   fullName: string = '';
-  userData: IUserData = this.storageService.getValue("USER_DATA");
+  userData: IUserData = this.storageService.getValue(storageKey.USER_DATA);
 
   constructor(
     @Inject('storageRepository') private storageService: IStorageRepository,
