@@ -1,0 +1,28 @@
+<ng-container *ngIf="isEmpty(this.transactions); then True; else False"></ng-container>
+
+<ng-template #True>
+  <h3>Don't there transactions</h3>
+  <img class="img-style" src="../../../../../../assets/images/sad-face.png" alt="sad face">
+</ng-template>
+
+<ng-template #False>
+  <table class="table-style">
+    <thead class="thead-style">
+      <tr>
+        <th>ID</th>
+        <th>AMOUNT</th>
+        <th>TRANSFER TO</th>
+        <th>DATE</th>
+      </tr>
+    </thead>
+    <tbody class="tbody-style">
+      <tr *ngFor="let transaction of transactions">
+        <td>*</td>
+        <td>{{transaction.amount}}</td>
+        <td>{{transaction.transferTo}}</td>
+        <td>{{transaction.date | date:'medium'}}</td>
+      </tr>
+    </tbody>
+</table>
+
+</ng-template>

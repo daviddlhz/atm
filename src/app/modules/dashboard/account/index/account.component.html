@@ -3,26 +3,11 @@
   <hr />
   <div class="sub-container">
     <div class="bank-information">
-      <p>Balance: {{balance | currency: 'COP':'symbol-narrow'}}</p>
-      <p>Account number: {{accountNumber}}</p>
-      <p>Account type: {{accountType}}</p>
+      <bank-information-component></bank-information-component>
     </div>
     <hr />
     <div class="transaction-information">
-      <table>
-        <tr>
-          <th>ID</th>
-          <th>AMOUNT</th>
-          <th>TRANSFER TO</th>
-          <th>DATE</th>
-        </tr>
-        <tr>
-          <td>5680</td>
-          <td>15000</td>
-          <td>5657</td>
-          <td>Febrero 2022</td>
-        </tr>
-      </table>
+      <transaction-component></transaction-component>
     </div>
   </div>
 </div>
