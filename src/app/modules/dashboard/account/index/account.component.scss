@@ -1,7 +1,31 @@
-.container {
+.container-style {
     font-size: 18px;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
 }
 
 .sub-container {
+    justify-content: space-between;
+    height: 70vh;
+    margin-top: 5vh;
+}
+
+.bank-information {
     display: flex;
+    align-items: center;
+    background: #ffffff;
+    width: 70vh;
+    height: 20vh;
+    border: 2px solid #dfe0eb;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.transaction-information {
+    background: #ffffff;
+    height: 60vh;
+    border: 2px solid #dfe0eb;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center;
 }
