@@ -1,0 +1,44 @@
+.container-style {
+    font-size: 18px;
+    margin-top: 5vh;
+}
+
+.content {
+    background: #ffffff;
+    height: 65vh;
+    border: 2px solid #dfe0eb;
+    box-sizing: border-box;
+    margin-top: 5vh;
+    border-radius: 8px;
+    display: flex;
+    padding: 2% 5% 2% 5%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label-style {
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.input-style {
+    width: 60%;
+    height: 5vh;
+    text-align: center;
+    margin-bottom: 3vh;
+    font-size: 16px;
+}
+
+.textArea-style {
+    width: 60%;
+    text-align: justify;
+    font-size: 16px;
+    margin-bottom: 2vh;
+    resize: none;
+}
+
+.input-button-style {
+    width: 60.7%;
+    height: 8vh;
+    font-size: 18px;
+}
