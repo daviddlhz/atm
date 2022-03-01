@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { transferRoutes } from './transfer.routing';
 import { TransferComponent } from './index/transfer.component';
 import { StorageProvider } from 'src/app/core/domain/providers/storage.provider';
-import { TransferProvider } from './provider/transfer.provider';
+import { TransferProvider } from '../../../core/domain/providers/transfer.provider';
 import { FormsModule } from '@angular/forms';
 import { DataProvider } from 'src/app/core/domain/providers/data.provider';
 

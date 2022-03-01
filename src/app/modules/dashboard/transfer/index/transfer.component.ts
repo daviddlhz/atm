@@ -1,6 +1,7 @@
 import { Component, Inject } from '@angular/core';
+import { typeTransaction } from 'src/app/core/domain/enum/typeTransaction.enum';
 import { ITransaction } from 'src/app/core/domain/interfaces/ITransaction';
-import { ITransferRepository } from '../repository/ITransfer.repository';
+import { ITransferRepository } from '../../../../core/domain/repository/ITransfer.repository';
 
 @Component({
   selector: 'app-transfer',
@@ -18,6 +19,7 @@ export class TransferComponent {
   transfer(): void {
 
     const transaction: ITransaction = {
+      typeTransaction: typeTransaction.TRANSFER,
       amount: this.amount, 
       date: new Date, 
       transferTo: this.transferTo, 

@@ -1,8 +1,15 @@
-.container {
+.container-style {
     font-size: 18px;
+    margin-top: 5vh;
 }
 
-.form-style {
+.content {
+    background: #ffffff;
+    height: 65vh;
+    border: 2px solid #dfe0eb;
+    box-sizing: border-box;
+    margin-top: 5vh;
+    border-radius: 8px;
     display: flex;
     padding: 2% 5% 2% 5%;
     flex-direction: column;
@@ -11,7 +18,6 @@
 
 .label-style {
     padding-bottom: 10px;
-    color: white;
     text-align: left;
 }
 
@@ -35,8 +41,4 @@
     width: 60.7%;
     height: 8vh;
     font-size: 18px;
-    color: white;
-    border-radius: 5px;
-    background: #23c970;
-    border: none;
 }

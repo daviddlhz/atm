@@ -4,7 +4,7 @@ import { ITransaction } from 'src/app/core/domain/interfaces/ITransaction';
 import { IUserData } from 'src/app/core/domain/interfaces/IUserData';
 import { IDataRepository } from 'src/app/core/domain/repository/IData.repository';
 import { IStorageRepository } from 'src/app/core/domain/repository/IStorage.repository';
-import { ITransferRepository } from '../repository/ITransfer.repository';
+import { ITransferRepository } from '../domain/repository/ITransfer.repository';
 
 @Injectable()
 export class TransferService implements ITransferRepository {
@@ -15,7 +15,7 @@ export class TransferService implements ITransferRepository {
 
   send(transaction: ITransaction): boolean {
     
-    const currentUser = this.storageService.getValue(storageKey.USER_DATA);
+    const currentUser: IUserData = this.storageService.getValue(storageKey.USER_DATA);
     const userToTransfer: IUserData | undefined = this.validateTransaction(transaction.transferTo);
 
     if (userToTransfer) {
@@ -25,9 +25,6 @@ export class TransferService implements ITransferRepository {
         userToTransfer.bankInformation.balance += transaction.amount;
         currentUser.bankInformation.balance -= transaction.amount;
         currentUser.bankInformation.transactions?.push(transaction);
-        
-        console.log(transaction);
-        console.log(currentUser);
         
         this.dataService.update(currentUser);
         this.dataService.update(userToTransfer);

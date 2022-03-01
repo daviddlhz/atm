@@ -1,13 +1,12 @@
-<div class="container">
-    <h2>Transfer</h2>
-    <hr>
-    <div class="form-style">
+<div class="container container-style">
+    <h3>Transfer</h3>
+    <div class="content form-group">
         <label class="label-style" for="transferTo">Transfer to: </label>
-        <input class="input-style" type="number" [(ngModel)]="transferTo" name="transferTo" id="transferTo" placeholder="Ingrese numero de cuenta">
+        <input class="form-control input-style" type="number" [(ngModel)]="transferTo" name="transferTo" id="transferTo" placeholder="Ingrese numero de cuenta">
         <label class="label-style" for="transferTo">Amount: </label>
-        <input class="input-style" type="number" [(ngModel)]="amount" name="amount" id="amount" placeholder="Ingrese monto">
+        <input class="form-control input-style" type="number" [(ngModel)]="amount" name="amount" id="amount" placeholder="Ingrese monto">
         <label class="label-style" for="description">Description: </label>
-        <textarea class="textArea-style" [(ngModel)]="description" name="description" id="description" cols="30" rows="5"></textarea>
-        <input class="input-button-style" type="button" value="Enviar" (click)="transfer()">
+        <textarea class="form-control textArea-style" rows="3"></textarea>
+        <input class="input-button-style btn btn-primary" type="button" value="Enviar" (click)="transfer()">
     </div>
 </div>
