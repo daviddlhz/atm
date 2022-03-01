@@ -14,6 +14,8 @@ export class AppComponent implements OnInit {
   constructor(@Inject('storageRepository') private storageService: IStorageRepository) {}
 
   ngOnInit(): void {
-    this.storageService.save(storageKey.USERS_INFORMATION, usersData);
+    if(!localStorage.hasOwnProperty(storageKey.USERS_INFORMATION)) {
+      this.storageService.save(storageKey.USERS_INFORMATION, usersData);
+    }
   }
 }

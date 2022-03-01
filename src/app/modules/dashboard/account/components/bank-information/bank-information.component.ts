@@ -11,6 +11,7 @@ import { IStorageRepository } from 'src/app/core/domain/repository/IStorage.repo
 })
 export class BankInformationComponent implements OnInit {
   
+  //inicializacion de datos go to ngOninit
   userData: IUserData = this.storageService.getValue(storageKey.USER_DATA);
   bankData: IBankData = this.userData.bankInformation;
   balance: number = 0;

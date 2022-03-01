@@ -1,11 +1,15 @@
-<div class="container-dashboard">
-    <div class="top-bar">
+<div class="container-fluid vh-100 container-style">
+  <div class="row">
+    <div class="col-2 vh-100 side-bar-style">
+      <side-bar-component></side-bar-component>
+    </div>
+    <div class="col-10">
+      <div class="row">
         <top-bar-component></top-bar-component>
-    </div>
-    <div class="side-bar">
-        <side-bar-component></side-bar-component>
-    </div>
-    <div class="content">
+      </div>
+      <div class="row">
         <router-outlet></router-outlet>
+      </div>
     </div>
+  </div>
 </div>

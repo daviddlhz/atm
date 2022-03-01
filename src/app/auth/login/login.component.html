@@ -1,8 +1,13 @@
-<div class="login-container">
-  <img class="img-style" src="../../../assets/images/login-image.png" alt="user image">
-  <label class="label-style" for="username">Username</label>
-  <input class="input-style" type="text" placeholder="username" [(ngModel)]="userName" />
-  <label class="label-style" for="password">Password</label>
-  <input class="input-style" type="password" placeholder="password" [(ngModel)]="password" />
-  <input class="input-button-style" type="button" value="Login" (click)="login()" />
+<div class="container-fluid vh-100 d-flex align-items-center justify-content-center container-style">
+  <div class="row align-items-center row-style">
+    <div class="col d-flex flex-column">
+      <h1>Login</h1>
+      <p>Sign into your account</p>
+      <label for="username" class="form-label">Username</label>
+      <input type="text" class="form-control input-style" [(ngModel)]="userName" placeholder="Write your username here"/>
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control input-style" [(ngModel)]="password" placeholder="Write your password here"/>
+      <button type="button" class="btn btn-primary btn-lg" (click)="login()">Login</button>
+    </div>
+  </div>
 </div>

@@ -1,3 +1,23 @@
-.container {
+.container-style {
+    margin-top: 5vh;
+    margin-bottom: 2vh;
     font-size: 18px;
+    color: #252733;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 134px;
+    border: 2px solid #dfe0eb;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-top: 4%;
+    background:linear-gradient(135deg, #E3E3E3 0%,#5D6874 100%);
+}
+
+.p-style {
+    font-size: 40px;
 }
