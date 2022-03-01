@@ -6,5 +6,6 @@ export interface IUserData {
   password: string;
   firstName: string;
   lastName: string;
-  bankInformation: IBankData
+  bankInformation: IBankData;
+  friends: number[]
 }

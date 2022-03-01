@@ -14,6 +14,7 @@ export const usersData: IUserData[] = [
       accountType: accountType.SAVING,
       transactions: [],
     },
+    friends: [],
   },
   {
     id: 1,
@@ -27,5 +28,6 @@ export const usersData: IUserData[] = [
       accountType: accountType.SAVING,
       transactions: [],
     },
+    friends: [],
   },
 ];

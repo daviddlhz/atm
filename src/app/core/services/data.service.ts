@@ -10,7 +10,6 @@ export class DataService implements IDataRepository {
     constructor(@Inject('storageRepository') private storageService: IStorageRepository){ }
 
     update(userData: IUserData): void {
-
         const usersData = this.storageService.getAll(storageKey.USERS_INFORMATION);
 
         usersData.find((user, index) => {
@@ -19,5 +18,11 @@ export class DataService implements IDataRepository {
                 this.storageService.save(storageKey.USERS_INFORMATION, usersData);
             }
         })
+    }
+
+    save(userData: IUserData): void {
+        const usersData = this.storageService.getAll(storageKey.USERS_INFORMATION);
+        usersData.push(userData);
+        this.storageService.save(storageKey.USERS_INFORMATION, usersData);
     }
 }
