@@ -1,1 +1,27 @@
-<p>account-friend works!</p>
+<div class="container container-style">
+    <h3>Create account friend</h3>
+    <div class="row content">
+        <div class="col-6 form-group col-style">
+            <label for="first-name">First name</label>
+            <input class="form-control input-style" type="text" [(ngModel)]="firstName" placeholder="Write your first name">
+            <label for="last-name">Last name</label>
+            <input class="form-control input-style" type="text" [(ngModel)]="lastName" placeholder="Write your last name">
+            <label for="last-name">Username</label>
+            <input class="form-control input-style" type="text" [(ngModel)]="userName" placeholder="Write your username">
+        </div>
+        <div class="col-6 form-group col-style">
+            
+            <label for="last-name">Password</label>
+            <input class="form-control input-style" type="password" [(ngModel)]="password" placeholder="Write your password">
+            <label for="TypeOfAccount">Type of account</label>
+            <select class="form-control select-style" [(ngModel)]="accountType">
+                <option>Saving</option>
+                <option>Current</option>
+                <option>Cheking</option>
+            </select>
+            <label for="last-name">Balance</label>
+            <input class="form-control input-style" type="number" [(ngModel)]="balance" placeholder="Insert your balance">
+        </div>
+        <input class="btn btn-primary btn-lg input-button-style" type="button" (click)="create()" value="CREATE">
+    </div>
+</div>
