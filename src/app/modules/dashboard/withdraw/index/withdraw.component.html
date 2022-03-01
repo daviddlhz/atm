@@ -1,1 +1,8 @@
-<p>withdraw works!</p>
+<div class="container container-style">
+    <h3>Withdraw</h3>
+    <div class="content form-group">
+        <label class="label-style" for="amount">Amount </label>
+        <input class="form-control input-style" [(ngModel)]="amount" type="number" name="amount" placeholder="Ingrese cantidad a retirar">
+        <input class="btn btn-primary input-button-style" type="button" value="Retirar" (click)="cashout()">
+    </div>
+</div>
