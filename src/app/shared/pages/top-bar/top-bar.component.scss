@@ -1,4 +1,4 @@
-.container {
+.container-style {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -6,15 +6,6 @@
 }
 
 .description {
+    padding-top: 1.3vh;
     padding-right: 30%;
-}
-
-.button-style {
-    color: white;
-    font-size: 24px;
-    border-radius: 5px;
-    background: #23c970;
-    width: 20vh;
-    height: 8vh;
-    border: none;
 }
