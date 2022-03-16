@@ -1,0 +1,28 @@
+<ng-container *ngIf="isEmpty(this.currentUser.friends); then ShowMessage; else ShowFriends"></ng-container>
+
+<ng-template #ShowMessage>
+  <h3>Don't have friends</h3>
+  <img class="img-style" src="./assets/images/sad-face.png" alt="sad face">
+</ng-template>
+
+<ng-template #ShowFriends>
+  <table class="table-style">
+    <thead class="thead-style">
+      <tr>
+        <th>ID</th>
+        <th>FIRST NAME</th>
+        <th>LAST NAME</th>
+      </tr>
+    </thead>
+    <tbody class="tbody-style">
+      <ng-container *ngFor="let friend of friends">
+        <tr>
+          <td>{{friend.id}}</td>
+          <td>{{friend.firstName}}</td>
+          <td>{{friend.lastName}}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+</table>
+
+</ng-template>

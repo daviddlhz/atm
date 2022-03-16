@@ -3,11 +3,13 @@
     <div class="col d-flex flex-column">
       <h1>Login</h1>
       <p>Sign into your account</p>
-      <label for="username" class="form-label">Username</label>
-      <input type="text" class="form-control input-style" [(ngModel)]="userName" placeholder="Write your username here"/>
-      <label for="password" class="form-label">Password</label>
-      <input type="password" class="form-control input-style" [(ngModel)]="password" placeholder="Write your password here"/>
-      <button type="button" class="btn btn-primary btn-lg" (click)="login()">Login</button>
+      <form [formGroup]="authForm" (ngSubmit)="login()">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control input-style" formControlName="username" placeholder="Write your username here"/>
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control input-style" formControlName="password" placeholder="Write your password here"/>
+        <button type="submit" class="btn btn-primary btn-lg">Login</button>
+      </form>
     </div>
   </div>
 </div>

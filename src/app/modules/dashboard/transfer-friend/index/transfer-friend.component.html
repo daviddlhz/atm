@@ -1,8 +1,10 @@
 <div class="container container-style">
     <h3>Transfer friend</h3>
     <div class="content form-group">
-        <label class="label-style" for="transferTo">Transfer to: </label>
-        <input class="form-control input-style" type="number" [(ngModel)]="transferTo" name="transferTo" id="transferTo" placeholder="Ingrese numero de cuenta">
+        <label class="label-style" for="transferTo">Select a friend</label>
+        <select class="form-control select-style" [(ngModel)]="transferTo">
+            <option [value]="friend.bankInformation.accountNumber" *ngFor="let friend of friends">{{friend.firstName + ' ' + friend.lastName}}</option>
+        </select>
         <label class="label-style" for="transferTo">Amount: </label>
         <input class="form-control input-style" type="number" [(ngModel)]="amount" name="amount" id="amount" placeholder="Ingrese monto">
         <label class="label-style" for="description">Description: </label>

@@ -1,10 +1,15 @@
 <div class="container container-style">
   <h3>Account</h3>
     <div class="row sub-container">
-      <div class="col-6 bank-information">
-        <bank-information-component></bank-information-component>
+      <div class="col-6">
+        <div class="row bank-information">
+          <bank-information-component></bank-information-component>
+        </div>
+        <div class="row friend-information overflow-auto">
+          <friend-component></friend-component>
+        </div>
       </div>
-      <div class="col-6 transaction-information">
+      <div class="col-6 transaction-information overflow-auto">
         <transaction-component></transaction-component>
       </div>
     </div>

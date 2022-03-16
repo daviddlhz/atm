@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { LoginComponent } from './login/login.component';
 import { authRoutes } from './auth.routing';
-import { FormsModule } from '@angular/forms';
 import { AuthProvider } from '../core/domain/providers/auth.provider';
 import { StorageProvider } from '../core/domain/providers/storage.provider';
 
@@ -14,9 +14,8 @@ import { StorageProvider } from '../core/domain/providers/storage.provider';
     LoginComponent
   ],
   imports: [
-    CommonModule,
-    RouterModule.forChild(authRoutes),
-    FormsModule
+    ReactiveFormsModule,
+    RouterModule.forChild(authRoutes)
   ],
   providers: [
     AuthProvider,

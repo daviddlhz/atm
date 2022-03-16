@@ -1,14 +1,13 @@
-<!--Cambiar nombres mas empresivos-->
-<ng-container *ngIf="isEmpty(this.transactions); then ShowMessage; else ShowTable"></ng-container>
+<ng-container *ngIf="isEmpty(this.transactions); then ShowMessage; else ShowTransactions"></ng-container>
 
 <ng-template #ShowMessage>
   <h3>Don't there transactions</h3>
   <img class="img-style" src="./assets/images/sad-face.png" alt="sad face">
 </ng-template>
 
-<ng-template #ShowTable>
+<ng-template #ShowTransactions>
   <table class="table-style">
-    <thead class="thead-style">
+    <thead>
       <tr>
         <th>TYPE</th>
         <th>AMOUNT</th>
@@ -17,13 +16,14 @@
       </tr>
     </thead>
     <tbody class="tbody-style">
-      <!--ng container abrazando la fila-->
-      <tr *ngFor="let transaction of transactions">
-        <td>{{transaction.typeTransaction}}</td>
-        <td>{{transaction.amount}}</td>
-        <td>{{transaction.transferTo}}</td>
-        <td>{{transaction.date | date:'medium'}}</td>
-      </tr>
+      <ng-container *ngFor="let transaction of transactions">
+        <tr>
+          <td>{{transaction.typeTransaction}}</td>
+          <td>{{transaction.amount | currency: "COP":"symbol-narrow"}}</td>
+          <td>{{transaction.transferTo}}</td>
+          <td>{{transaction.date | date:'medium'}}</td>
+        </tr>
+      </ng-container>
     </tbody>
 </table>
 
